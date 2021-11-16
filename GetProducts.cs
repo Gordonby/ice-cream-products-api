@@ -19,7 +19,7 @@ namespace IceCream
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            string productId  = req.Query["productId "];
+            string productId  = req.Query["productId"];
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
